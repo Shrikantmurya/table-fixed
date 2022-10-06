@@ -537,17 +537,17 @@
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
         crossorigin="anonymous"></script>
     <script>
-        for (let i = 0; i < document.getElementsByTagName('table').length; i++) {
-            var speedSec = document.getElementsByTagName('table')[i].getAttribute('table-height');
-            var el = document.getElementsByTagName('table')[i];
+        for (let i = 0; i < document.querySelectorAll('.table').length; i++) {
+            var speedSec = document.querySelectorAll('.table')[i].getAttribute('table-height');
+            var el = document.querySelectorAll('.table')[i];
             var wrapper = document.createElement('div');
             wrapper.style = "height:" + speedSec + "px; overflow: scroll; scrollbar-width: thin !important;"
             wrapper.className = 'table-overflow';
             el.parentNode.insertBefore(wrapper, el);
             wrapper.appendChild(el);
             //fixed header
-            var tabRow = document.querySelectorAll('table thead tr')[i].style.borderTop = '0';
-            matches = document.querySelectorAll('table thead th');
+            var tabRow = document.querySelectorAll('.table thead tr')[i].style.borderTop = '0';
+            matches = document.querySelectorAll('.table thead th');
             for (var value of matches.values()) {
                 value.style = "position: sticky; top: 0;";
             }
