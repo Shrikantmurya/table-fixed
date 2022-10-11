@@ -22,7 +22,7 @@
     <title>Wepora Snippets</title>
 </head>
 <style>
-    table thead th {
+    .table-wepora thead th {
         background-color: black !important;
         color: white !important;
     }
@@ -43,7 +43,7 @@
 </style>
 
 <body>
-    <table class="table table-bordered" table-height="500">
+    <table class="table table-wepora table-bordered" table-height="500">
         <thead>
             <tr>
                 <th>Firstname</th>
@@ -205,7 +205,7 @@
         </tbody>
     </table>
 
-    <table class="table table-bordered" table-height="200">
+    <table class="table table-wepora table-bordered" table-height="200">
         <thead>
             <tr>
                 <th>Firstname</th>
@@ -366,7 +366,7 @@
             </tr>
         </tbody>
     </table>
-    <table class="table table-bordered" table-height="100">
+    <table class="table table-wepora table-bordered" table-height="100">
         <thead>
             <tr>
                 <th>Firstname</th>
@@ -537,17 +537,17 @@
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
         crossorigin="anonymous"></script>
     <script>
-        for (let i = 0; i < document.querySelectorAll('.table').length; i++) {
-            var speedSec = document.querySelectorAll('.table')[i].getAttribute('table-height');
-            var el = document.querySelectorAll('.table')[i];
+        for (let i = 0; i < document.querySelectorAll('.table-wepora').length; i++) {
+            var speedSec = document.querySelectorAll('.table-wepora')[i].getAttribute('table-height');
+            var el = document.querySelectorAll('.table-wepora')[i];
             var wrapper = document.createElement('div');
             wrapper.style = "height:" + speedSec + "px; overflow: scroll; scrollbar-width: thin !important;"
             wrapper.className = 'table-overflow';
             el.parentNode.insertBefore(wrapper, el);
             wrapper.appendChild(el);
             //fixed header
-            var tabRow = document.querySelectorAll('.table thead tr')[i].style.borderTop = '0';
-            matches = document.querySelectorAll('.table thead th');
+            var tabRow = document.querySelectorAll('.table-wepora thead tr')[i].style.borderTop = '0';
+            matches = document.querySelectorAll('.table-wepora thead th');
             for (var value of matches.values()) {
                 value.style = "position: sticky; top: 0;";
             }
